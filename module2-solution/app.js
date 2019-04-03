@@ -22,7 +22,7 @@
             { name: "Cookies", quantity: 10, price: .5 },
             { name: "Orange Juice Container", quantity: 1, price: 5 },
             { name: "Milk Jugs", quantity: 3, price: 4 },
-            { name: "Loafs of Bread", quantity: 5, price: 3 },
+            { name: "Loaves of Bread", quantity: 5, price: 3 },
             { name: "Cheese Slices", quantity: 30, price: .1 },
             { name: "Frozen Meals", quantity: 10, price: 6 },
             { name: "Apples", quantity: 8, price: 1 },
