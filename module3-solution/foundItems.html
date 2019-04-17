@@ -1,0 +1,10 @@
+<div ng-show="foundItems.length > 0">
+    <table>
+      <tbody>
+        <tr ng-repeat="item in foundItems">
+          <td>{{item.id}}</td><td>{{item.name}}</td> 
+          <td><button ng-click="onRemove({index:$index})">Don't want this one!</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
