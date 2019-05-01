@@ -1,0 +1,10 @@
+<table cellspacing="10">
+  <tr>
+    <th>Cat</th>
+    <th align="right">Name</th>
+  </tr>
+  <tr ng-repeat="item in $ctrl.items" ui-sref="categories.items({categoryShortName: item.short_name})">
+      <td>{{item.short_name}}</td>
+      <td align="right">{{item.name}}</td>
+  </tr>
+</table>
