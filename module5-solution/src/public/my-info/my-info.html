@@ -1,0 +1,18 @@
+<div class="container" style="text-align: center">
+    <div ng-if="!myinfoCtrl.showInfo" class="text-center">
+        <div>Not Signed Up Yet.</div>
+        <a ui-sref="public.signup">Sign up Now!</a>
+    </div>
+    <div ng-if="myinfoCtrl.showInfo">
+        <div>
+            First Name: {{myinfoCtrl.signupInputData.user.firstname}}&nbsp;&nbsp;
+            Last Name: {{myinfoCtrl.signupInputData.user.lastname}}
+        </div>
+        <div>
+            Email Address: {{myinfoCtrl.signupInputData.user.email}}&nbsp;&nbsp;
+            Phone #: {{myinfoCtrl.signupInputData.user.phone}}
+        </div>
+        <br/>
+        <menu-item menu-item="myinfoCtrl.signupInputData.favoriteDish"></menu-item>
+    </div>
+</div>

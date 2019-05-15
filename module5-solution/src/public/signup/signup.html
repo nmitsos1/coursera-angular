@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="col-md-6">
+        <form name="signupForm" novalidate>
+            <label for="firstname" class="control-label">First name</label>
+            <span ng-if="signupForm.firstname.$error.required && signupForm.firstname.$touched">Please enter your First Name</span>
+            <input type="text" class="form-control" name="firstname" id="firstname" ng-model="signupCtrl.signup.user.firstname" required>
+            <label for="lastname" class="control-label">Last name</label>
+            <span ng-if="signupForm.lastname.$error.required && signupForm.lastname.$touched">Please enter your Last Name</span>
+            <input type="text" class="form-control" name="lastname" id="lastname" ng-model="signupCtrl.signup.user.lastname" required>
+            <label for="email" class="control-label">Email</label>
+            <span>
+                <span ng-if="signupForm.email.$invalid && signupForm.email.$touched">Email not valid.</span>
+                <span ng-if="signupForm.email.$error.required && signupForm.email.$touched">Please enter your Email.</span>
+            </span>
+            <input type="email" class="form-control" name="email" id="email" ng-model="signupCtrl.signup.user.email"
+            placeholder="test@site.com" required>
+            <label for="phone" class="control-label">Phone number</label>
+            <span>
+                <span ng-if="signupForm.phone.$invalid && signupForm.phone.$touched">Phone # not valid.</span>
+                <span ng-if="signupForm.phone.$error.required && signupForm.phone.$touched">Please enter your Phone #.</span>
+            </span>
+            <input class="form-control" name="phone" id="phone" ng-model="signupCtrl.signup.user.phone" 
+            placeholder="###-###-####" pattern="(\d{3})-(\d{3})-(\d{4})" required>
+            <label for="shortname" class="control-label">Favorite Dish Short Name</label>
+            <span>
+                <span ng-if="signupForm.shortname.$error.required && signupForm.shortname.$touched">Please enter a menu short name</span>
+                <span ng-if="signupForm.$submitted && signupCtrl.itemFound === false">No such menu number exists</span>
+            </span>
+            <input type="text" class="form-control" name="shortname" id="shortname" ng-model="signupCtrl.signup.shortname" required>
+            <br/>
+            <button style="color: black" type="submit" ng-click="signupCtrl.submit()" ng-disabled="signupForm.$invalid">Sign in</button>
+            <br/>
+            <p ng-if="signupForm.$submitted && signupCtrl.itemFound && signupForm.$valid">Your information has been saved</p>
+        </form>
+    </div>
+</div>
